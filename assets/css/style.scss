@@ -1,0 +1,801 @@
+@import url(_font.scss);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  body {
+    display: block;
+    font-family: 'Josefin Sans';
+    margin: 0 auto;
+  }
+  
+  $color-blue: #5373FD;
+  
+  @mixin text_style ($f-f, $f-s, $l-h, $f-w, $coloring) {
+    font-family: $f-f;
+    font-size: $f-s;
+    line-height: $l-h;
+    font-weight: $f-w;
+    color: $coloring;
+  }
+
+.section {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+
+  .hero  {
+    background-image: url(../img/HeaderBackground.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 295px;
+    padding-bottom: 40px;
+  }
+
+  
+
+  .hero-site_title {
+    @include text_style ('Josefin Sans', 48px, 52px, 700, #ffff);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .hero-subtitle {
+    @include text_style ('Josefin Sans', 22px, 28px, 400, #ffff);
+    text-transform: capitalize;
+    letter-spacing: 8px;
+    margin-bottom: 50px;
+  }
+
+  .input_wrapper {
+    position: relative;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+
+  .input_search {
+    padding: 20px 335px 20px 35px;
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 210px;
+    &::placeholder {
+    @include text_style ('Josefin Sans', 14px, 20px, 400, #999999 );
+    text-transform: capitalize;
+    letter-spacing: 2px; }
+    &:focus {
+    color: #999999;
+    opacity: 0.9;
+    outline: none;
+        }
+  }
+
+  .button_search {
+    position: absolute;
+    @include text_style ('Aleo', 14px, 20px, 400, #ffff);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    bottom: 4px;
+    right: 4px;
+    background-color: #5373FD;
+    width: 100%;
+    max-width: 140px;
+    padding: 16px 0;
+    border: none;
+    padding-left: 40px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    &:hover {
+      background-color: #1933a9;
+    }
+    &::before {
+        content: " ";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background-image: url(../img/search.svg);
+        background-repeat: no-repeat;
+        top: 18px;
+        left: 24px;
+        z-index: 2;
+    }
+    
+  }
+
+  .scroll {
+    @include text_style ('Josefin Sans', 14px, 20px, 400, #ffff );
+    text-transform: capitalize; 
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 100px;
+    &::after {
+        content: ' ';
+        width: 14px;
+        height: 16px;
+        background-image: url(../img/chevron-down.svg);
+        background-repeat: no-repeat;
+        bottom: -21px;
+        left: 30px;
+        position: absolute;
+    }
+  }
+
+  
+
+   .header {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    background-color: $color-blue;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 70px 30px 110px;
+    align-items: center;
+    
+   }
+
+   .header_menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+   }
+
+   .logo_header {
+    width: 100%;
+    max-width: 170px;
+    @include text_style ('Josefin Sans', 24px, 28px, 700, #ffff);
+    text-transform: uppercase;
+    text-decoration: none;
+
+   }
+
+   .link_header {
+    @include text_style ('Aleo', 14px, 20px, 400, #ffff);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    transition: .4s ease-in-out;
+    &:hover {
+        transform: scale(0.9);
+    }
+
+   }
+
+   ////Media HERO/////
+
+  @media screen and (max-width: 1024px) {
+    .hero  {
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        background-image: url(../img/HeaderBackground1024.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding-top: 295px;
+        padding-bottom: 40px;
+      }
+      .header {
+        max-width: 1024px;
+        padding: 30px;
+       }
+
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero  {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        background-image: url(../img/HeaderBackground768.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding-top: 295px;
+        padding-bottom: 40px;
+      }
+
+      .header {
+        max-width: 768px;
+        padding: 30px 24px 30px 24px;
+        justify-content: center;
+       }
+       .logo_header {
+        margin-bottom: 30px;
+       }
+  }
+
+  @media screen and (max-width: 576px) {
+    .hero  {
+        width: 100%;
+        max-width: 576px;
+        margin: 0 auto;
+        background-image: url(../img/HeaderBackground576.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding-top: 295px;
+        padding-bottom: 40px;
+      }
+      .input_search {
+        position: relative;
+        padding: 20px 225px 20px 35px;
+        width: 100%;
+        max-width: 540px;
+        margin-bottom: 210px;
+        &::placeholder {
+        @include text_style ('Josefin Sans', 14px, 20px, 400, #999999 );
+        text-transform: capitalize;
+        letter-spacing: 2px; }
+        &:focus {
+        color: #999999;
+        opacity: 0.9;
+        outline: none;
+            }
+      }
+    
+      .button_search {
+        position: absolute;
+        @include text_style ('Aleo', 14px, 20px, 400, #ffff);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        top: 4px;
+        right: 22px;
+        background-color: #5373FD;
+        width: 100%;
+        max-width: 140px;
+        padding: 16px 0;
+        border: none;
+        padding-left: 40px;
+        cursor: pointer;
+        &::before {
+            content: " ";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background-image: url(../img/search.svg);
+            background-repeat: no-repeat;
+            top: 18px;
+            left: 24px;
+            z-index: 2;
+        } 
+      }
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 10px 20px;
+      }
+      .logo_header {
+      margin: 10px 0 10px 0;
+    }
+
+      .link_header {
+        gap: 25px;
+      }
+      
+      .link_header:last-child {
+        margin-bottom: 20px;
+      }
+      .link_header:first-child {
+        margin-top: 10px;
+      }
+
+      .header_menu {
+        flex-direction: column;
+        display: none;
+      }
+
+      .show_menu {
+       display: flex;
+      }
+
+      #navMenu {
+        position: absolute;
+        top: 25px;
+        right: 23px;
+}
+      #navMenu > span {
+        display: block;
+        width: 28px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #ffff;
+      }
+      #navMenu > span:not(:last-child) {
+        margin-bottom: 7px;
+      }
+
+      #navMenu, #navMenu > span {
+        transition: all 0.01s ease-in-out;
+      }
+      #navMenu:active {
+        transition-delay: 0.01s;
+        transform: rotate(45deg);
+      }
+
+      #navMenu:active > span:nth-child(2) {
+        width: 0;
+      }
+      #navMenu:active > span:nth-child(1),
+      #navMenu:active > span:nth-child(3) {
+        transition-delay: 0.01s;
+      }
+
+      #navMenu:active > span:nth-child(1) {
+        transform: translateY(9px);
+      }
+      #navMenu:active > span:nth-child(3) {
+        transform: translateY(-9px) rotate(90deg);
+      }
+  }
+
+   ////Media/////
+   /// 
+   /// 
+  
+
+   ////Choose us///////
+   /// 
+  .choose_us {
+    background-image: url(../img/WhyBackground.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+
+  .choose_us_wrapper {
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+  }
+
+  .choose_text_block {
+    width: 100%;
+    max-width: 558px;
+    text-align: left;
+  }
+
+  .choose-title {
+    @include text_style ('Aleo', 36px, 40px, 400, #ffff);
+    margin-bottom: 25px;
+    margin-top: 65px;
+  }
+
+  .choose-text {
+    @include text_style ('Josefin Sans', 16px, 28px, 300, #ffff);
+    letter-spacing: 1.6px;
+    margin-bottom: 32px;
+  }
+
+  .choose_button {
+    text-decoration: none;
+    @include text_style ('Aleo', 16px, 20px, 400, #ffff);
+    text-transform:uppercase;
+    border: 1px solid $color-blue;
+    padding: 20px 32px;
+    background-color: $color-blue;
+    transition: .4s ease-in-out;
+    &:hover {
+        cursor: pointer;
+        transform: scale(0.9);
+    }
+  }
+
+  .choose_image_block {
+    width: 100%;
+    max-width: 461px;
+  }
+
+  .choose_photo {
+    width: 100%;
+    max-width: 350px; 
+  }
+
+  .sea {
+    width: 100%;
+    max-width: 461px;
+    padding-right: 110px;
+    margin-bottom: 15px;
+  }
+
+  .mount { 
+    width: 100%;
+    max-width: 461px;
+    padding-left: 110px; 
+  }
+  @media screen and (max-width: 1024px) {
+    .choose_us {
+      max-width: 1024px; 
+    }
+    
+    .choose_us_wrapper {
+      width: 100%;
+      max-width: 960px;
+    }
+    .sea {
+      padding-right: 30px;
+    }
+  
+    .mount { 
+      padding-left: 30px; 
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .choose_us {
+      text-align: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      max-width: 768px;
+    }
+  
+    .choose_us_wrapper {
+      width: 100%;
+      max-width: 720px;
+      display: flex;
+      flex-direction: column-reverse;
+      margin: 0 auto;
+  
+    }
+  
+    .choose_text_block {
+      width: 100%;
+      max-width: 720px;
+      text-align: center;
+    }
+    .choose_image_block {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+  
+    .choose_photo {
+      max-width: 348px; 
+    }
+  
+    .sea {
+      margin-bottom: 15px;
+      padding-right: 0;
+    }
+  
+    .mount { 
+     padding-left: 0;
+  
+  } }
+
+  @media screen and (max-width: 576px) {
+    .choose_us {
+     max-width: 576px;
+    }
+    .choose_us_wrapper {
+     padding: 0 10px 0;
+
+    }
+    .choose_text_block {
+      max-width: 540px;
+    }
+    .choose_photo {
+      max-width: 258px; 
+    }
+     .choose_image_block {
+      max-width: 720px;
+      gap: 20px;
+    }
+  }
+
+
+
+///// Steps//////
+  .steps {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    background-color: #333333;
+    padding-top: 125px;
+    padding-bottom: 45px;
+  }
+
+  .steps_wrapper {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: relative;
+
+  }
+
+  .steps_item {
+    text-align: center;
+  }
+
+  .steps_image {
+    width: 100%;
+    max-width: 95px;
+    margin-bottom: 20px;
+    }
+
+  .steps_title {
+    @include text_style ('Aleo', 36px, 40px, 400, #ffff);
+  }
+
+  .steps_line {
+    max-width: 752px;
+    position: absolute;
+    top: -65px;
+    left: 186px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .steps {
+    width: 100%;
+    max-width: 1024px; }
+    
+    .steps_wrapper {
+      max-width: 960px;
+      padding: 0;
+    }
+    .steps_line  {
+      max-width: 632px;
+      top: -50px;
+      left: 13px;
+    }
+  }
+
+  @media screen and (max-width: 768px)  {
+    .steps {
+      max-width: 768px;
+      padding-top: 60px;
+      padding-bottom: 60px; }
+      
+      .steps_wrapper {
+        max-width: 720px;
+        padding: 0;
+        flex-direction: column;
+        gap: 60px;
+      }
+      .steps_line  {
+      display: none;
+      }
+  }
+
+  @media screen and (max-width: 576px)  {
+    .steps {
+      max-width: 576px; }
+    .steps_wrapper {
+        max-width: 540px;
+    }
+      
+  }
+
+
+  //////SPAIN/////
+  /// 
+  .spain_section {
+    background-image: url(../img/render.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 220px 110px 120px;
+
+  }
+  .spain_text-block{
+    max-width: 560px;
+    text-align: left;
+    background-color: #232323;
+    opacity: 0.9;
+    padding: 44px 32px;
+
+  }
+
+  .spain_suptitle {
+    @include text_style ('Josefin Sans', 20px, 28px, 300, #ffff);
+    margin-bottom: 15px;
+  }
+
+  .span_block-title {
+    @include text_style ('Josefin Sans', 20px, 28px, 400, #ffff);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  .spain-text {
+    @include text_style ('Josefin Sans', 16px, 28px, 300, #ffff);
+    letter-spacing: 1.6px;
+    margin-bottom: 25px;
+  }
+
+  .spain_button {
+    text-decoration: none;
+    @include text_style ('Aleo', 16px, 20px, 400, #ffff);
+    text-transform: uppercase;
+    border: 1px solid $color-blue;
+    padding: 20px 56px;
+    background-color: $color-blue;
+    transition: .4s ease-in-out;
+    &:hover {
+        cursor: pointer;
+        transform: scale(0.9);
+    }
+  }
+
+  .landscape {
+    background-image: url(../img/spain.jpg);
+    margin-top: -2px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+    @media screen and (max-width: 576px)  {
+    .spain_section {
+    padding: 150px 80px 120px;
+  }
+    .spain_text-block{
+    text-align: center;
+  }
+  
+  }
+
+
+
+
+  /////Tourists say///////
+  /// 
+  .tousits_say {
+    padding: 120px 110px 180px;
+    text-align: center;
+    background-image: url(../img/BG_review.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+  }
+
+  .tousits_say_title {
+    @include text_style ('Aleo', 36px, 40px, 400, #ffff);
+   margin-bottom: 60px;
+  }
+
+  .review_wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .review_photo {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .review_text {
+    background-color: #333333;
+    opacity: 0.9;
+    max-width: 760px;
+    padding: 48px 60px;
+    text-align: left;
+    position: relative;
+
+     .title_name {
+    @include text_style ('Josefin Sans', 20px, 28px, 400, #ffff); 
+    margin-bottom: 16px;
+     }
+     .review_description {
+    text-indent: 30px;
+    @include text_style ('Josefin Sans', 16px, 28px, 300, #ffff);   
+     }
+  }
+
+  .quote-left {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/quote-left.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: 85px;
+    left: 60px;
+  }
+//////////////////////////
+   @media screen and (max-width: 576px)  {
+    .review_wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  } 
+
+  
+
+}
+
+
+  /////FOOTER/////
+
+.footer {
+  background-color: #000000;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.footer_logo {
+  @include text_style ('Josefin Sans', 24px, 28px, 700, #ffff);
+  margin-bottom: 8px;
+  text-transform: uppercase
+}
+.footer_undertitle {
+  @include text_style ('Josefin Sans', 14px, 20px, 700, #ffff);
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 22px;
+}
+  .social_icon {
+    margin-left: 30px;
+    &::before {
+    font-family:'fontello';
+    font-style: normal;
+    font-weight: normal;
+    color:  #ffff;
+    font-size: 25px;
+    transition: all 0.3s ease;
+    }
+}
+
+.social_link:hover .social_icon::before {
+  color: $color-blue;
+}
+  
+
+.icon-fb {
+margin-left: 0; 
+&::before { 
+content: '\f09a';
+} }
+
+.icon-tw { 
+&::before { 
+content: '\f309'; }
+}
+
+.icon-in {
+&::before {  
+content:'\f30c';
+} }
+
+.icon-inst {
+    &::before {  
+  content: '\e800';
+ } 
+}
+
+.icon-yb {
+    &::before {  
+    content: '\f16a'; 
+     }    
+}
+
+.social-icon_wrapper {
+    margin-bottom: 45px;
+}
