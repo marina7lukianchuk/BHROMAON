@@ -87,8 +87,8 @@
     @include text_style ('Aleo', 14px, 20px, 400, #ffff);
     text-transform: uppercase;
     letter-spacing: 3px;
-    bottom: 4px;
-    right: 4px;
+    bottom: 6%;
+    right: 1%;
     background-color: #5373FD;
     width: 100%;
     max-width: 140px;
@@ -107,8 +107,8 @@
         height: 18px;
         background-image: url(../img/search.svg);
         background-repeat: no-repeat;
-        top: 18px;
-        left: 24px;
+        top: 33%;
+        left: 18%;
         z-index: 2;
     }
     
@@ -218,7 +218,10 @@
        .logo_header {
         margin-bottom: 30px;
        }
-  }
+       .button_search {
+        top: 4%;
+        right: 3%;
+  } }
 
   @media screen and (max-width: 576px) {
     .hero  {
@@ -236,7 +239,7 @@
         position: relative;
         padding: 20px 225px 20px 35px;
         width: 100%;
-        max-width: 540px;
+        max-width: 380px;
         margin-bottom: 210px;
         &::placeholder {
         @include text_style ('Josefin Sans', 14px, 20px, 400, #999999 );
@@ -254,8 +257,8 @@
         @include text_style ('Aleo', 14px, 20px, 400, #ffff);
         text-transform: uppercase;
         letter-spacing: 3px;
-        top: 4px;
-        right: 22px;
+        top: 4%;
+        right: 3%;
         background-color: #5373FD;
         width: 100%;
         max-width: 140px;
@@ -270,11 +273,17 @@
             height: 18px;
             background-image: url(../img/search.svg);
             background-repeat: no-repeat;
-            top: 18px;
-            left: 24px;
+            top: 33%;
+            left: 18%;
             z-index: 2;
         } 
       }
+ @media screen and (max-width: 385px) {
+  .input_search {
+    padding: 20px 205px 20px 35px;
+    max-width: 350px;
+  }
+ }
 
       .header {
         display: flex;
@@ -593,6 +602,7 @@
       
   }
 
+ 
 
   //////SPAIN/////
   /// 
@@ -652,13 +662,18 @@
 
     @media screen and (max-width: 576px)  {
     .spain_section {
-    padding: 150px 80px 120px;
+    padding: 90px 40px 90px;
   }
     .spain_text-block{
     text-align: center;
   }
-  
   }
+
+    @media screen and (max-width: 385px) {
+    .spain_section {
+    padding: 90px 20px 90px;
+  }
+   }
 
 
 
@@ -718,17 +733,30 @@
     top: 85px;
     left: 60px;
   }
-//////////////////////////
-   @media screen and (max-width: 576px)  {
-    .review_wrapper {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  } 
 
-  
-
+@media screen and (max-width: 960px)  {
+.review_wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+} 
+.tousits_say {
+  padding: 90px 60px 90px;
 }
+}
+   @media screen and (max-width: 768px)  { 
+  .tousits_say {
+    padding: 90px 40px 90px;
+  }
+}
+
+    @media screen and (max-width: 385px) {
+    .tousits_say {
+    padding: 90px 20px 90px;
+  }
+   }
+
+
 
 
   /////FOOTER/////

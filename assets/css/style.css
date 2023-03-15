@@ -291,45 +291,60 @@ body {
     left: 24px;
     z-index: 2;
   }
-
+}
+@media screen and (max-width: 576px) and (max-width: 365px) {
+  .input_search {
+    padding: 20px 205px 20px 35px;
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: 576px) {
   .header {
     display: flex;
     flex-direction: column;
     position: relative;
     padding: 10px 20px;
   }
-
+}
+@media screen and (max-width: 576px) {
   .logo_header {
     margin: 10px 0 10px 0;
   }
-
+}
+@media screen and (max-width: 576px) {
   .link_header {
     gap: 25px;
   }
-
+}
+@media screen and (max-width: 576px) {
   .link_header:last-child {
     margin-bottom: 20px;
   }
-
+}
+@media screen and (max-width: 576px) {
   .link_header:first-child {
     margin-top: 10px;
   }
-
+}
+@media screen and (max-width: 576px) {
   .header_menu {
     flex-direction: column;
     display: none;
   }
-
+}
+@media screen and (max-width: 576px) {
   .show_menu {
     display: flex;
   }
-
+}
+@media screen and (max-width: 576px) {
   #navMenu {
     position: absolute;
     top: 25px;
     right: 23px;
   }
-
+}
+@media screen and (max-width: 576px) {
   #navMenu > span {
     display: block;
     width: 28px;
@@ -337,33 +352,40 @@ body {
     border-radius: 2px;
     background-color: #ffff;
   }
-
+}
+@media screen and (max-width: 576px) {
   #navMenu > span:not(:last-child) {
     margin-bottom: 7px;
   }
-
+}
+@media screen and (max-width: 576px) {
   #navMenu, #navMenu > span {
     transition: all 0.01s ease-in-out;
   }
-
+}
+@media screen and (max-width: 576px) {
   #navMenu:active {
     transition-delay: 0.01s;
     transform: rotate(45deg);
   }
-
+}
+@media screen and (max-width: 576px) {
   #navMenu:active > span:nth-child(2) {
     width: 0;
   }
-
+}
+@media screen and (max-width: 576px) {
   #navMenu:active > span:nth-child(1),
 #navMenu:active > span:nth-child(3) {
     transition-delay: 0.01s;
   }
-
+}
+@media screen and (max-width: 576px) {
   #navMenu:active > span:nth-child(1) {
     transform: translateY(9px);
   }
-
+}
+@media screen and (max-width: 576px) {
   #navMenu:active > span:nth-child(3) {
     transform: translateY(-9px) rotate(90deg);
   }
@@ -702,6 +724,11 @@ body {
     text-align: center;
   }
 }
+@media screen and (max-width: 365px) {
+  .spain_section {
+    padding: 90px 20px 90px;
+  }
+}
 .tousits_say {
   padding: 120px 110px 180px;
   text-align: center;
@@ -771,6 +798,11 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 365px) {
+  .tousits_say {
+    padding: 90px 20px 90px;
   }
 }
 .footer {
