@@ -91,8 +91,8 @@ body {
   color: #ffff;
   text-transform: uppercase;
   letter-spacing: 3px;
-  bottom: 4px;
-  right: 4px;
+  bottom: 6%;
+  right: 1%;
   background-color: #5373FD;
   width: 100%;
   max-width: 140px;
@@ -112,8 +112,8 @@ body {
   height: 18px;
   background-image: url(../img/search.svg);
   background-repeat: no-repeat;
-  top: 18px;
-  left: 24px;
+  top: 33%;
+  left: 18%;
   z-index: 2;
 }
 
@@ -205,12 +205,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .hero {
-    width: 100%;
     max-width: 768px;
     margin: 0 auto;
-    background-image: url(../img/HeaderBackground768.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     text-align: center;
     padding-top: 295px;
     padding-bottom: 40px;
@@ -225,126 +221,106 @@ body {
   .logo_header {
     margin-bottom: 30px;
   }
+
+  .input_search {
+    padding: 20px 60px 20px 5px;
+    max-width: 570px;
+  }
+
+  .button_search {
+    top: 4%;
+    right: 6.5%;
+  }
+}
+@media screen and (max-width: 635px) {
+  .button_search {
+    right: 5.5%;
+  }
+
+  .header_menu {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .button_search {
+    right: 3.5%;
+  }
 }
 @media screen and (max-width: 576px) {
   .hero {
-    width: 100%;
     max-width: 576px;
     margin: 0 auto;
-    background-image: url(../img/HeaderBackground576.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     text-align: center;
     padding-top: 295px;
     padding-bottom: 40px;
   }
 
   .input_search {
-    position: relative;
-    padding: 20px 225px 20px 35px;
-    width: 100%;
-    max-width: 540px;
+    padding: 20px 60px 20px 5px;
+    max-width: 390px;
     margin-bottom: 210px;
   }
   .input_search::placeholder {
     font-family: "Josefin Sans";
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 14px;
     font-weight: 400;
     color: #999999;
-    text-transform: capitalize;
-    letter-spacing: 2px;
-  }
-  .input_search:focus {
-    color: #999999;
-    opacity: 0.9;
-    outline: none;
+    letter-spacing: 1px;
   }
 
   .button_search {
-    position: absolute;
     font-family: "Aleo";
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
     color: #ffff;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    top: 4px;
-    right: 22px;
-    background-color: #5373FD;
-    width: 100%;
-    max-width: 140px;
-    padding: 16px 0;
-    border: none;
-    padding-left: 40px;
-    cursor: pointer;
+    letter-spacing: 1px;
+    padding: 2px;
+    right: 15.5%;
   }
   .button_search::before {
-    content: " ";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-image: url(../img/search.svg);
-    background-repeat: no-repeat;
-    top: 18px;
-    left: 24px;
-    z-index: 2;
+    display: none;
   }
-}
-@media screen and (max-width: 576px) and (max-width: 365px) {
-  .input_search {
-    padding: 20px 205px 20px 35px;
-    max-width: 350px;
-  }
-}
-@media screen and (max-width: 576px) {
+
   .header {
     display: flex;
     flex-direction: column;
     position: relative;
     padding: 10px 20px;
   }
-}
-@media screen and (max-width: 576px) {
+
   .logo_header {
     margin: 10px 0 10px 0;
   }
-}
-@media screen and (max-width: 576px) {
+
   .link_header {
     gap: 25px;
   }
-}
-@media screen and (max-width: 576px) {
+
   .link_header:last-child {
     margin-bottom: 20px;
   }
-}
-@media screen and (max-width: 576px) {
+
   .link_header:first-child {
     margin-top: 10px;
   }
-}
-@media screen and (max-width: 576px) {
+
   .header_menu {
     flex-direction: column;
     display: none;
   }
-}
-@media screen and (max-width: 576px) {
+
   .show_menu {
     display: flex;
   }
-}
-@media screen and (max-width: 576px) {
+
   #navMenu {
     position: absolute;
     top: 25px;
     right: 23px;
   }
-}
-@media screen and (max-width: 576px) {
+
   #navMenu > span {
     display: block;
     width: 28px;
@@ -352,42 +328,92 @@ body {
     border-radius: 2px;
     background-color: #ffff;
   }
-}
-@media screen and (max-width: 576px) {
+
   #navMenu > span:not(:last-child) {
     margin-bottom: 7px;
   }
-}
-@media screen and (max-width: 576px) {
+
   #navMenu, #navMenu > span {
     transition: all 0.01s ease-in-out;
   }
-}
-@media screen and (max-width: 576px) {
+
   #navMenu:active {
     transition-delay: 0.01s;
     transform: rotate(45deg);
   }
-}
-@media screen and (max-width: 576px) {
+
   #navMenu:active > span:nth-child(2) {
     width: 0;
   }
-}
-@media screen and (max-width: 576px) {
+
   #navMenu:active > span:nth-child(1),
 #navMenu:active > span:nth-child(3) {
     transition-delay: 0.01s;
   }
-}
-@media screen and (max-width: 576px) {
+
   #navMenu:active > span:nth-child(1) {
     transform: translateY(9px);
   }
-}
-@media screen and (max-width: 576px) {
+
   #navMenu:active > span:nth-child(3) {
     transform: translateY(-9px) rotate(90deg);
+  }
+}
+@media screen and (max-width: 549px) {
+  .button_search {
+    right: 14.5%;
+    max-width: 80px;
+    font-family: "Aleo";
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #ffff;
+  }
+}
+@media screen and (max-width: 525px) {
+  .button_search {
+    right: 13.5%;
+  }
+}
+@media screen and (max-width: 485px) {
+  .button_search {
+    right: 9.5%;
+  }
+}
+@media screen and (max-width: 455px) {
+  .button_search {
+    right: 7.5%;
+  }
+}
+@media screen and (max-width: 415px) {
+  .button_search {
+    right: 3.5%;
+  }
+}
+@media screen and (max-width: 396px) {
+  .button_search {
+    right: 1.5%;
+  }
+}
+@media screen and (max-width: 385px) {
+  .input_search {
+    padding: 20px 75px 20px 5px;
+    max-width: 310px;
+  }
+
+  .button_search {
+    right: 11%;
+    max-width: 80px;
+    font-family: "Aleo";
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #ffff;
+  }
+}
+@media screen and (max-width: 356px) {
+  .button_search {
+    right: 6.5%;
   }
 }
 .choose_us {
@@ -477,6 +503,7 @@ body {
 @media screen and (max-width: 1024px) {
   .choose_us {
     max-width: 1024px;
+    padding: 90px 10px 90px 45px;
   }
 
   .choose_us_wrapper {
@@ -495,8 +522,7 @@ body {
 @media screen and (max-width: 768px) {
   .choose_us {
     text-align: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 40px;
     max-width: 768px;
   }
 
@@ -539,10 +565,12 @@ body {
 @media screen and (max-width: 576px) {
   .choose_us {
     max-width: 576px;
+    padding: 60px 10px;
   }
 
   .choose_us_wrapper {
     padding: 0 10px 0;
+    margin: 0 auto;
   }
 
   .choose_text_block {
@@ -596,16 +624,25 @@ body {
 }
 
 .steps_line {
-  max-width: 752px;
   position: absolute;
-  top: -65px;
-  left: 186px;
+  bottom: 95%;
+  left: 16%;
 }
 
+.line {
+  width: 100%;
+}
+
+@media screen and (max-width: 1110px) {
+  .line {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .steps {
     width: 100%;
     max-width: 1024px;
+    padding: 125px 45px 45px 45px;
   }
 
   .steps_wrapper {
@@ -614,9 +651,13 @@ body {
   }
 
   .steps_line {
-    max-width: 632px;
-    top: -50px;
-    left: 13px;
+    max-width: 80%;
+    bottom: 95%;
+    left: 10%;
+  }
+
+  .line {
+    width: 95%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -717,14 +758,14 @@ body {
 
 @media screen and (max-width: 576px) {
   .spain_section {
-    padding: 150px 80px 120px;
+    padding: 90px 40px 90px;
   }
 
   .spain_text-block {
     text-align: center;
   }
 }
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 385px) {
   .spain_section {
     padding: 90px 20px 90px;
   }
@@ -793,14 +834,38 @@ body {
   left: 60px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 960px) {
   .review_wrapper {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
   }
+
+  .tousits_say {
+    padding: 90px 60px 90px;
+  }
+
+  .review_photo {
+    margin: 0 auto;
+  }
+
+  .review_text {
+    margin: 0 auto;
+    max-width: 380px;
+    padding: 38px 20px;
+  }
+
+  .quote-left {
+    top: 85px;
+    left: 22px;
+  }
 }
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 768px) {
+  .tousits_say {
+    padding: 90px 40px 90px;
+  }
+}
+@media screen and (max-width: 385px) {
   .tousits_say {
     padding: 90px 20px 90px;
   }
